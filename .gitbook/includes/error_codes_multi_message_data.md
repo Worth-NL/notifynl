@@ -1,0 +1,9 @@
+---
+title: error_codes_multi_message_data
+---
+
+| Error message                                                                                                                                                                                                                                              | How to fix                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| **ValidationError (status code 400)**                                                                                                                                                                                                                      |                                                                                                                   |
+| `status ‘elephant’ is not one of [cancelled, created, sending, sent, delivered, pending, failed, technical-failure, temporary-failure, permanent-failure, pending-virus-check, validation-failed, virus-scan-failed, returned-letter, accepted, received]` | Change the [status argument](https://docs.notifications.service.gov.uk/java.html#status-optional).                |
+| `‘Apple’ is not one of [sms, email, letter]`                                                                                                                                                                                                               | Change the [template\_type argument](https://docs.notifications.service.gov.uk/java.html#template-type-optional). |
