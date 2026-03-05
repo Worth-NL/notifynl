@@ -73,13 +73,6 @@ You can set [different permissions for each member of your team](../using-notify
 
 AWS provides logical separation between different AWS customers.
 
-#### Data centre security <a href="#data-centre-security" id="data-centre-security"></a>
-
-AWS provides a description of their:
-
-* [physical security measures, data sanitisation and equipment disposal arrangements](https://aws.amazon.com/compliance/data-center/controls/)
-* [security assurance materials](https://aws.amazon.com/compliance/programs/)
-
 #### How text messages are stored and processed <a href="#how-text-messages-are-stored-and-processed" id="how-text-messages-are-stored-and-processed"></a>
 
 Text messages are stored and processed in:
@@ -156,15 +149,9 @@ We monitor our production environment for unauthorised changes.
 
 NotifyNL
 
-* follows development principes based on the UK teams' [secure development principles](https://www.ncsc.gov.uk/collection/developers-collection/principles)
+* follows development principes based on the Dutch Government's [secure development principles ](https://developer.overheid.nl/kennisbank/leidraad/security/)
 * tracks third-party dependencies in our code base
 * monitors our logs for attacks, misuse and malfunctions
-
-AWS is responsible for patching our infrastructure:
-
-* firmware
-* hardware
-* operating system (OS) kernel
 
 ### Security incidents <a href="#security-incidents" id="security-incidents"></a>
 
@@ -184,75 +171,44 @@ Find out more about our [sign-in methods](../using-notifynl/using-notifynl/sign-
 
 You must keep to our [terms of use for signing in to Notify](https://www.notifications.service.gov.uk/terms-of-use).
 
-#### Accessing the GOV.UK Notify API
+#### Accessing the NotifyNL API
 
-Services access the GOV.UK Notify API with an API key, encoded using [JSON Web Tokens](https://jwt.io/).
+Services access the NotifyNL API with an API key, encoded using [JSON Web Tokens](https://jwt.io/).
 
-For more information, see our [API documentation](https://www.notifications.service.gov.uk/using-notify/api-documentation).
+For more information, see our [API documentation](../using-notifynl/using-notifynl/api-documentation.md).
 
 ### Protecting our website and API <a href="#protecting-our-website-and-api" id="protecting-our-website-and-api"></a>
 
-The GOV.UK Notify website, API and any files sent by email are protected by:
+The NotifyNL website, API and any files sent by email are protected by:
 
 * AWS [Web Application Firewall](https://aws.amazon.com/waf/) (WAF)
 * AWS [Shield Advanced](https://aws.amazon.com/shield/)
 * rate limiting
 
-We use publicly-verifiable digital certificates, so you’ll always know you’ve connected to the real GOV.UK Notify.
+We use publicly-verifiable digital certificates, so you’ll always know you’ve connected to the real NotifyNL.
 
 ### Email security <a href="#email-security" id="email-security"></a>
 
 To help recipient’s email services tell the difference between our emails and spam, we use:
 
-* [Domain-based Message Authentication, Reporting and Conformance (DMARC)](https://www.gov.uk/government/publications/email-security-standards/domain-based-message-authentication-reporting-and-conformance-dmarc)
-* [DomainKeys Identified Mail (DKIM)](https://www.gov.uk/government/publications/email-security-standards/domainkeys-identified-mail-dkim)
-* [Sender Policy Framework (SPF)](https://www.gov.uk/government/publications/email-security-standards/sender-policy-framework-spf)
+* [Domain-based Message Authentication, Reporting and Conformance (DMARC)](https://www.communicatierijk.nl/vakkennis/rijkswebsites/verplichte-richtlijnen/dmarc)
+* [DomainKeys Identified Mail (DKIM)](https://www.communicatierijk.nl/vakkennis/rijkswebsites/verplichte-richtlijnen/domainkeys-identified-mail)
+* [Sender Policy Framework (SPF)](https://www.communicatierijk.nl/vakkennis/rijkswebsites/verplichte-richtlijnen/sender-policy-framework-spf)
 
-### Security classifications <a href="#security-classifications" id="security-classifications"></a>
-
-We have designed GOV.UK Notify for sending messages classified as ‘OFFICIAL’, including ‘OFFICIAL-SENSITIVE’, under the [Government Security Classifications policy](https://www.gov.uk/government/publications/government-security-classifications).
-
-Before you send any messages classified as ‘OFFICIAL’, you must make sure that GOV.UK Notify meets your organisation’s standards for:
-
-* using, processing, storing and sending information
-* cyber security
-* data protection
-
-Notify must not be used to process data classified as ‘SECRET’ or ‘TOP SECRET’.
-
-### GOV.UK Notify staff <a href="#staff" id="staff"></a>
+### NotifyNL staff <a href="#staff" id="staff"></a>
 
 We restrict the number of people that can access your data on GOV.UK Notify.
 
 We follow the principle of least privilege. This means we give our team members the lowest level of permissions needed to do their job.
 
-All our staff:
-
-* receive security training
-* complete [personnel screening equivalent to BPSS](https://www.gov.uk/government/publications/government-baseline-personnel-security-standard)
-
-Team members who need greater access to the data stored on Notify must complete [National Security Vetting to Security Check (SC) level](https://www.gov.uk/government/publications/united-kingdom-security-vetting-clearance-levels/national-security-vetting-clearance-levels#security-check-sc).
-
-We only give additional access to GOV.UK Notify’s production environment to privileged users:
+We only give additional access to NotifyNL production environment to privileged users:
 
 * by exception
 * on a temporary basis
 * in relation to a specific change request or support ticket
 
-The GDS security operations team logs and tracks privileged users’ access to our production environment.
-
 ### Suppliers <a href="#suppliers" id="suppliers"></a>
 
-GOV.UK Notify uses third-party providers to send emails, text messages and letters.
+NotifyNL uses third-party providers to send emails, text messages and letters.
 
 Suppliers sign a contract or memorandum of understanding that includes our security requirements.
-
-All our suppliers:
-
-* receive security training
-* complete [personnel screening equivalent to BPSS](https://www.gov.uk/government/publications/government-baseline-personnel-security-standard)
-
-GDS assesses suppliers:
-
-* before we decide whether to use them
-* at regular intervals to make sure they still meet our requirements
