@@ -84,13 +84,13 @@ AWS provides a description of their:
 
 Text messages are stored and processed in:
 
-* the UK and Ireland
+* the European Union only
 * the country where the recipient’s phone is
 * the phone’s country of origin (for international numbers)
 
 ### Protecting data in transit <a href="#protecting-data-in-transit" id="protecting-data-in-transit"></a>
 
-GOV.UK Notify uses Transport Layer Security (TLS) version 1.2 to encrypt data when:
+NotifyNL uses Transport Layer Security (TLS) version 1.2 to encrypt data when:
 
 * users access the Notify website or API
 * data passes through Notify
@@ -108,21 +108,21 @@ Text messages cannot provide end-to-end encryption.
 
 ### Protecting data at rest <a href="#protecting-data-at-rest" id="protecting-data-at-rest"></a>
 
-GOV.UK Notify encrypts the data stored in our databases and backups using AES-256 encryption.
+NotifyNL encrypts the data stored in our databases and backups using AES-256 encryption.
 
 This includes any files that you upload to Notify when you:
 
-* [send a batch of messages](https://www.notifications.service.gov.uk/using-notify/bulk-sending)
-* [attach pages to a letter template](https://www.notifications.service.gov.uk/using-notify/attach-pages)
-* [upload a letter](https://www.notifications.service.gov.uk/using-notify/upload-a-letter)
+* [send a batch of messages](../using-notifynl/using-notifynl/bulk-sending.md)
+* [attach pages to a letter template](../using-notifynl/using-notifynl/attach-pages.md)
+* [upload a letter](../using-notifynl/using-notifynl/upload-a-letter.md)
 
 #### Sending files by email <a href="#sending-files-by-email" id="sending-files-by-email"></a>
 
-When you upload a file we encrypt it with [AWS SSE-C](https://docs.aws.amazon.com/AmazonS3/latest/userguide/ServerSideEncryptionCustomerKeys.html), which uses AES-256 encryption.
+When you upload a file we encrypt it with AWS SSE-C, which uses AES-256 encryption.
 
 We will only share the unique link with the intended recipient. We cannot access or decrypt your file.
 
-For more information about this feature, see [send files by email](https://www.notifications.service.gov.uk/using-notify/send-files-by-email).
+For more information about this feature, see [send files by email](../using-notifynl/using-notifynl/send-files-by-email.md).
 
 ### Building and managing GOV.UK Notify <a href="#building-and-managing-notify" id="building-and-managing-notify"></a>
 
@@ -137,12 +137,12 @@ To protect our code, we:
 
 #### How we manage code changes <a href="#how-we-manage-code-changes" id="how-we-manage-code-changes"></a>
 
-To manage GOV.UK Notify, we use:
+To manage NotifyNL we use:
 
-* GDS-managed devices
+* firewall based VPN access to live services
 * multi-factor authentication (MFA)
 
-We manage Notify through the www.notifications.service.gov.uk website.
+We manage Notify through the admin.notifyNL.nl website.
 
 AWS manages the hardware we use.
 
@@ -152,26 +152,13 @@ All code changes must be reviewed by the team before we can deploy them.
 
 We monitor our production environment for unauthorised changes.
 
-We give our users appropriate notice before:
-
-* any planned outages or downtime
-* making significant functional changes
-
-We announce planned downtime on the [Notify status page](https://status.notifications.service.gov.uk).
-
 ### Finding and fixing security issues <a href="#finding-and-fixing-security-issues" id="finding-and-fixing-security-issues"></a>
 
-GOV.UK Notify:
+NotifyNL
 
-* follows [secure development principles](https://www.ncsc.gov.uk/collection/developers-collection/principles)
+* follows development principes based on the UK teams' [secure development principles](https://www.ncsc.gov.uk/collection/developers-collection/principles)
 * tracks third-party dependencies in our code base
 * monitors our logs for attacks, misuse and malfunctions
-* provides [24-hour online support](https://www.notifications.service.gov.uk/support)
-
-We use [Web Check](https://www.ncsc.gov.uk/information/web-check) and other services to:
-
-* scan for vulnerabilities
-* prioritise which software patches to test and deploy first
 
 AWS is responsible for patching our infrastructure:
 
@@ -181,23 +168,19 @@ AWS is responsible for patching our infrastructure:
 
 ### Security incidents <a href="#security-incidents" id="security-incidents"></a>
 
-We provide a 24-hour response in case of an incident.
-
 If there is a data loss event, we will contact you directly.
-
-If there is another type of incident, we’ll publish details and updates on the [Notify status page](https://status.notifications.service.gov.uk).
 
 ### Sign in and API access <a href="#sign-in-and-api-access" id="sign-in-and-api-access"></a>
 
 #### Signing in to Notify
 
-GOV.UK Notify uses two-factor authentication for sign-in.
+NotifyNL uses two-factor authentication for sign-in.
 
 Team members can sign in with a text message code or a link that’s sent in an email.
 
 For security, you’ll need to confirm that you still have access to your email address every 3 months.
 
-Find out more about our [sign-in methods](https://www.notifications.service.gov.uk/using-notify/sign-in-method).
+Find out more about our [sign-in methods](../using-notifynl/using-notifynl/sign-in-method.md).
 
 You must keep to our [terms of use for signing in to Notify](https://www.notifications.service.gov.uk/terms-of-use).
 
